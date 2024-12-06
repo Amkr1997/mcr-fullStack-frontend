@@ -2,14 +2,6 @@ import { useState } from "react";
 import axios from "axios";
 
 const AddRecipe = () => {
-  /*const [formData, setFormData] = useState({
-    name: "",
-    cusineType: "",
-    imageLink: "",
-    ingredients: "",
-    instructions: "",
-  });*/
-
   const [name, setName] = useState("");
   const [cusineType, setCuisineType] = useState("");
   const [imageLink, setImageLink] = useState("");
@@ -19,22 +11,17 @@ const AddRecipe = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log(name);
-    console.log(cusineType);
-    console.log(imageLink);
-    console.log(ingredients);
-    console.log(instructions);
-
     try {
-      const addRecipe = await axios.post(`http://localhost:3000/add/recipe`, {
-        name,
-        cusineType,
-        imageLink,
-        ingredients,
-        instructions,
-      });
-
-      console.log(addRecipe);
+      const addRecipe = await axios.post(
+        `https://mcr-full-stack-backend.vercel.app/add/recipe`,
+        {
+          name,
+          cusineType,
+          imageLink,
+          ingredients,
+          instructions,
+        }
+      );
     } catch (error) {
       console.log(error);
     }

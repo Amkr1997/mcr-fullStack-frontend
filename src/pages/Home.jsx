@@ -44,8 +44,6 @@ const Home = () => {
     return recipe.name.toLowerCase() === search.toLowerCase();
   });
 
-  console.log(recipe.recipeDetails);
-
   return (
     <section className="container py-4">
       <Search setSearch={setSearch} />
@@ -75,13 +73,19 @@ const Home = () => {
                       </p>
                       <p className="fw-medium">
                         Ingredients:{" "}
-                        <Link to={`/recipeDetails/${recipe._id}`}>
+                        <Link
+                          to={`/recipeDetails/${recipe._id}`}
+                          state={recipe}
+                        >
                           See Recipe
                         </Link>
                       </p>
                       <p className="fw-medium">
                         Instructions:{" "}
-                        <Link to={`/recipeDetails/${recipe._id}`}>
+                        <Link
+                          to={`/recipeDetails/${recipe._id}`}
+                          state={recipe}
+                        >
                           See Recipe
                         </Link>
                       </p>
@@ -119,13 +123,19 @@ const Home = () => {
                       </p>
                       <p className="fw-medium">
                         Ingredients:{" "}
-                        <Link to={`/recipeDetails/${recipe._id}`}>
+                        <Link
+                          to={`/recipeDetails/${recipe._id}`}
+                          state={recipe}
+                        >
                           See Recipe
                         </Link>
                       </p>
                       <p className="fw-medium">
                         Instructions:{" "}
-                        <Link to={`/recipeDetails/${recipe._id}`}>
+                        <Link
+                          to={`/recipeDetails/${recipe._id}`}
+                          state={recipe}
+                        >
                           See Recipe
                         </Link>
                       </p>

@@ -5,7 +5,7 @@ const Navbar = () => {
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container">
-          <NavLink className="navbar-brand fw-medium text-warning" href="#">
+          <NavLink className="navbar-brand fw-medium text-warning" to="/">
             Recipe Organiser
           </NavLink>
 
